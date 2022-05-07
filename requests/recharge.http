@@ -1,0 +1,37 @@
+### get all recharges
+GET http://localhost:3000/api/recharge
+
+### get all recharge especifing pagination
+GET http://localhost:3000/api/recharge?page=0&size=3
+
+### get all recharges done
+GET http://localhost:3000/api/recharge/done
+
+### get all recharge TODO
+GET http://localhost:3000/api/recharge/todo
+
+### get recharge
+GET http://localhost:3000/api/recharge/6275691129a73227b48c36be
+
+### delete recharge
+DELETE  http://localhost:3000/api/recharge/5fd40d60b27b091708bccf8c
+
+### create new recharge
+POST http://localhost:3000/api/recharge
+Content-Type: application/json
+
+{
+  "username": "Israel",
+  "number": 53119855,
+  "amount": 1000
+}
+
+### update recharge
+PUT http://localhost:3000/api/recharge/6275691129a73227b48c36be
+Content-Type: application/json
+
+{
+  "username": "Israel",
+  "number": 53553119,
+  "amount": 1020
+}

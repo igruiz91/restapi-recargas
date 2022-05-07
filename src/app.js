@@ -2,7 +2,7 @@ import express, { json } from "express";
 import morgan from "morgan";
 import cors from 'cors'
 import config from './config.js'
-import TaskRoutes from "./routes/task.routes.js";
+import rechargeRoutes from "./routes/recharge.routes.js";
 
 const app = express();
 
@@ -19,7 +19,7 @@ app.use(express.urlencoded({extended:false}))
 app.get("/", (req, res) => {
   res.json({ message: "Hello" });
 });
-app.use('/api/tasks', TaskRoutes);
+app.use("/api/recharge", rechargeRoutes);
 
 
 export default app
